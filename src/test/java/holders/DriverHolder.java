@@ -1,8 +1,6 @@
 package holders;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -27,6 +25,11 @@ public class DriverHolder {
     protected List<WebElement> getElementsByXpath(String xpath){
         int timeToWait = 15;
         return (new WebDriverWait(driver, timeToWait)).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(xpath)));
+    }
+    protected DriverHolder waitForPageLoad(){
+        new WebDriverWait(driver, 30).until((ExpectedConditions<Boolean>)
+                wd -> ((JavascriptExecutor) wd).executeScript("return document, readyState").equals("complete"));
+        return null;
     }
 
 

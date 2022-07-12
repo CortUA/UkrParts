@@ -22,9 +22,9 @@ public class TestInit {
 
 
     }
-    @AfterClass
+    /*@AfterClass
 
     public void close(){
         driver.quit();
-    }
+    }*/
 }
