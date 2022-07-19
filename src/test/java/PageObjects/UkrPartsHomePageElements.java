@@ -11,8 +11,10 @@ public class UkrPartsHomePageElements extends DriverHolder {
     }
     private String searchField = "//input[@id='artnum']";
     private String searchButton = "//button[@class='btn btn-sm btn-success searchButton']";
-
-
+    private String catalogButton = "//a[@href='/category/']"; // всього три кнопки каталога на домашній сторінці
+    private String emailField = "//input[@placeholder='E-Mail']";
+    private String passwordField = "//input[@placeholder='Пароль']";
+    private String loginButton = "//button[@class='btn btn-sm btn-success authTop']";
 
     public WebElement getSearchField(){
         return getElementByXpath(searchField);
@@ -20,5 +22,20 @@ public class UkrPartsHomePageElements extends DriverHolder {
     public WebElement getSearchButton(){
         return getElementsByXpath(searchButton).get(0);
     }
+    public WebElement getCatalogButton(){
+        return getElementsByXpath(catalogButton).get(1);
+    }
+
+    public WebElement getEmailField(){
+        return getElementByXpath(emailField);
+    }
+    public WebElement getPasswordField(){
+        return getElementByXpath(passwordField);
+    }
+    public WebElement getLogInButton(){
+        return getElementByXpath(loginButton);
+    }
+
+
 
 }

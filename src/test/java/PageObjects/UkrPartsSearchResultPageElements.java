@@ -10,9 +10,9 @@ public class UkrPartsSearchResultPageElements extends DriverHolder {
         super(driver);
     }
 
-    private String firstSearchResult = "//a[@href='/category/zapchasti-dlya-to/c-8/car/17752/']";
+    private String firstSearchResult = "//div[@class='part_img']";
     public WebElement getFirstSearchResult(){
-        return getElementByXpath(firstSearchResult);
+        return getElementsByXpath(firstSearchResult).get(1);
     }
 
 
