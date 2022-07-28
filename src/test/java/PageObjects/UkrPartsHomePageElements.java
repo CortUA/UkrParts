@@ -15,6 +15,7 @@ public class UkrPartsHomePageElements extends DriverHolder {
     private String emailField = "//input[@placeholder='E-Mail']";
     private String passwordField = "//input[@placeholder='Пароль']";
     private String loginButton = "//button[@class='btn btn-sm btn-success authTop']";
+    private String airMenuField = "//*[@href='/category/korobka-peredach/c-4/']"; // Одно из множества полей
 
     public WebElement getSearchField(){
         return getElementByXpath(searchField);
@@ -34,6 +35,9 @@ public class UkrPartsHomePageElements extends DriverHolder {
     }
     public WebElement getLogInButton(){
         return getElementByXpath(loginButton);
+    }
+    public WebElement getAirMenuField(){
+        return getElementByXpath(airMenuField);
     }
 
 

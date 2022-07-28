@@ -17,7 +17,7 @@ public class TestUkrPartsMyOrders extends TestInit {
         ukrPartsPageHelper.goToHomePage();
         ukrPartsPageHelper.logIn("dima.opanasiuk@gmail.com", "VseDlyaLancer9");
         UkrPartsUserPageHelper ukrPartsUserPageHelper = new UkrPartsUserPageHelper(driver);
-        sleep(200);
+      
         ukrPartsUserPageHelper.selectMyOrders();
 
     }

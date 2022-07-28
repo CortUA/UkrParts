@@ -34,6 +34,11 @@ public class DriverHolder {
                 wd -> ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
         return null;
     }
+   /* protected WebElement waitForElementClick(WebElement element) {
+        int timeToWait = 15;
+        return ( new WebDriverWait(driver, timeToWait)
+                .until(ExpectedConditions.elementToBeClickable(element)));
+    }*/
    /* protected void waitForIt(String xpath){
         new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
     }*/

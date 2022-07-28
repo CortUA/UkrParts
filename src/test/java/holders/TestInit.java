@@ -20,12 +20,8 @@ public class TestInit {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
 
-
-
-
-
-    }
-    /*@AfterClass
+    }/*
+    @AfterClass
 
     public void close(){
         driver.quit();
